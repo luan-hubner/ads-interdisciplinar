@@ -2,14 +2,36 @@
   max-width: 1080px;
 }
 
-.main .introduction {
-  min-height: 100vh;
-  background-image: url('../assets/images/introduction-bg.png');
+.default__button {
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid var(--contrast-color);
+  padding: 0.75rem 2.5rem;
+  transition: 200ms ease-in all;
+  cursor: pointer;
+}
+
+.default__button:hover {
+  background-color: var(--contrast-color);
+}
+
+.default__button:hover span {
+  color: var(--background-default);
+}
+
+.default__button span {
+  font-family: IBM_SANS_BOLD;
+  font-size: 1rem;
+  color: var(--contrast-color);
 }
 
 .main .introduction {
+  min-height: 100vh;
+  background-image: url('../assets/images/introduction-bg.png');
   display: flex;
-  justify-content: center ;
+  justify-content: center;
   align-items: center;
 }
 
@@ -64,4 +86,81 @@
 
 .main .introduction .apresentation button:hover span {
   color: var(--background-default);
+}
+
+/* ------------------------------------------------------ */
+
+.main .information {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .information .container {
+  display: flex;
+  column-gap: 5rem;
+}
+
+.main .information .about__course {
+  display: flex;
+  flex-direction: column;
+}
+
+.main .information .about__course .section__header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.main .information .about__course .section__header h5 {
+  font-family: IBM_MONO_REGULAR;
+  font-size: 1.5rem;
+  color: var(--contrast-color);
+}
+
+.main .information .about__course .section__header h1 {
+  font-family: IBM_SANS_BOLD;
+  font-size: 3rem;
+  color: var(--text-color);
+}
+
+.main .information .about__course .text {
+  display: flex;
+  flex-direction: column;
+  max-width: 30rem;
+}
+
+.main .information .about__course .text p {
+  font-family: IBM_SANS_REGULAR;
+  font-size: 1rem;
+  color: var(--text-color);
+  text-align: justify;
+  line-height: 21px;
+}
+
+.main .information .section__caller {
+  max-width: 30rem;
+  background-color: var(--light-background-default);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.main .information .section__caller h1 {
+  font-family: IBM_SANS_BOLD;
+  font-size: 1.5rem;
+  line-height: 31px;
+  color: var(--contrast-color);
+}
+
+.main .information .section__caller p {
+  font-family: IBM_SANS_REGULAR;
+  font-size: 1rem;
+  color: var(--text-color);
+  text-align: justify;
+  line-height: 21px;
 }
