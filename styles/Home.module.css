@@ -164,3 +164,98 @@
   text-align: justify;
   line-height: 21px;
 }
+
+/* ------------------------------------------------------ */
+
+.main .study {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .study .container {
+  display: flex;
+  flex-direction: column;
+  column-gap: 5rem;
+}
+
+.main .study .container .section__header {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  margin-bottom: 4rem;
+}
+
+.main .study .container .section__header .indicator h5 {
+  font-family: IBM_MONO_REGULAR;
+  font-size: 1.5rem;
+  color: var(--contrast-color);
+}
+
+.main .study .container .section__header .indicator h1 {
+  font-family: IBM_SANS_BOLD;
+  font-size: 3rem;
+  color: var(--text-color);
+}
+
+.main .study .container .section__header .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 1rem;
+}
+
+.main .study .container .section__header .info p {
+  font-family: IBM_SANS_REGULAR;
+  font-size: 1rem;
+  color: var(--text-color);
+  text-align: start;
+  margin: 0;
+}
+
+.main .study .container .section__header .info b {
+  font-family: IBM_SANS_BOLD;
+  font-size: 1rem;
+  color: var(--contrast-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.main .study .container .course__content {
+  border: 1px solid var(--contrast-color);
+  padding: 3.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  column-gap: 4rem;
+  row-gap: 3rem;
+}
+
+.main .study .container .course__content .topic {
+  padding: 1rem;
+  width: 180px;
+  cursor: pointer;
+  transition: 200ms ease-in all;
+  display: flex;
+  justify-content: center;
+  line-break: auto;
+  height: 100%;
+}
+
+.main .study .container .course__content .topic h2 {
+  font-family: IBM_SANS_LIGHT;
+  color: var(--text-color);
+  font-size: 1.25rem;
+  line-height: 31px;
+  font-weight: 300;
+}
+
+.main .study .container .course__content .topic:hover {
+  background-color: var(--contrast-color);
+}
+
+.main .study .container .course__content .topic:hover h2 {
+  font-family: IBM_SANS_BOLD;
+  color: var(--background-default);
+}

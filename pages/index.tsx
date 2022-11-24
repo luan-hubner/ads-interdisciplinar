@@ -114,6 +114,53 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section className={styles.study}>
+          <div className={styles.container}>
+            <div className={styles.section__header}>
+              <div className={styles.indicator}>
+                <h5>/study</h5>
+                <h1>O QUE VOU ESTUDAR?</h1>
+              </div>
+
+              <div className={styles.info}>
+                <p>
+                  Só para você ter um gostinho do que esse curso tem a lhe
+                  oferecer, conheça os principais tópicos que você irá aprender
+                  durante o nosso curso.
+                </p>
+                <p>
+                  Se você desejar conheça a nossa <b>matriz curricular</b>{' '}
+                  completa.
+                </p>
+              </div>
+            </div>
+
+            <div className={styles.course__content}>
+              <div className={styles.topic}>
+                <h2>WEB DEVELOPMENT</h2>
+              </div>
+              <div className={styles.topic}>
+                <h2>ALGORITHMS</h2>
+              </div>
+              <div className={styles.topic}>
+                <h2>PROGRAMMING LOGIC</h2>
+              </div>
+              <div className={styles.topic}>
+                <h2>COMPUTER ARCHITECTURE</h2>
+              </div>
+              <div className={styles.topic}>
+                <h2>WEB DEVELOPMENT</h2>
+              </div>
+              <div className={styles.topic}>
+                <h2>ALGORITHMS</h2>
+              </div>
+              <div className={styles.topic}>
+                <h2>PROGRAMMING LOGIC</h2>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   )
