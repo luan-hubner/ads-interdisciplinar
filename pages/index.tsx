@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 import Header from '../components/Header'
+import Project from '../components/Project'
 
 //&rarr;
 //<Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
@@ -159,6 +160,52 @@ export default function Home() {
                 <h2>PROGRAMMING LOGIC</h2>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className={styles.hands__on}>
+          <div className={styles.container}>
+            <div className={styles.section__header}>
+              <div className={styles.indicator}>
+                <h5>/hands-on</h5>
+                <h1>MUITA PROGRAMAÇÃO</h1>
+              </div>
+
+              <div className={styles.info}>
+                <p>
+                  Nosso curso não exige um TCC para você se formar, porém, todo
+                  semestre, exceto no primeiro, você terá que entregar um
+                  projeto interdisciplinar, serão 4 projetos ao longo de 4
+                  semestres aonde você mostrará na prática o que aprendeu,
+                  conheça alguns projetos dos nossos alunos.
+                </p>
+              </div>
+            </div>
+
+            <div className={styles.projects}>
+              <Project
+                student="Luan Hubner"
+                project="Website"
+                repository="www.google.com"
+                imageUrl="minicode.png"
+              />
+              <Project
+                student="Luan Hubner"
+                project="Website"
+                repository="www.google.com"
+                imageUrl="minicode.png"
+              />
+              <Project
+                student="Luan Hubner"
+                project="Website"
+                repository="www.google.com"
+                imageUrl="minicode.png"
+              />
+            </div>
+
+            <button className={styles.default__button}>
+              <span>INSCREVA-SE</span>
+            </button>
           </div>
         </section>
       </main>

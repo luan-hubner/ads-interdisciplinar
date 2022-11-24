@@ -4,6 +4,7 @@
 
 .default__button {
   background: none;
+  max-width: 192px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -203,6 +204,7 @@
   flex-direction: column;
   justify-content: flex-start;
   row-gap: 1rem;
+  padding-top: 40px;
 }
 
 .main .study .container .section__header .info p {
@@ -258,4 +260,70 @@
 .main .study .container .course__content .topic:hover h2 {
   font-family: IBM_SANS_BOLD;
   color: var(--background-default);
+}
+
+/* ------------------------------------------------------ */
+
+.main .hands__on {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .hands__on .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  column-gap: 5rem;
+}
+
+.main .hands__on .container .section__header {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  margin-bottom: 6rem;
+}
+
+.main .hands__on .container .section__header .indicator h5 {
+  font-family: IBM_MONO_REGULAR;
+  font-size: 1.5rem;
+  color: var(--contrast-color);
+}
+
+.main .hands__on .container .section__header .indicator h1 {
+  font-family: IBM_SANS_BOLD;
+  font-size: 3rem;
+  color: var(--text-color);
+}
+
+.main .hands__on .container .section__header .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 1rem;
+}
+
+.main .hands__on .container .section__header .info p {
+  font-family: IBM_SANS_REGULAR;
+  font-size: 1rem;
+  color: var(--text-color);
+  text-align: start;
+  margin: 0;
+  padding-top: 40px;
+}
+
+.main .hands__on .container .section__header .info b {
+  font-family: IBM_SANS_BOLD;
+  font-size: 1rem;
+  color: var(--contrast-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.main .hands__on .container .projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2.5rem;
+  margin-bottom: 6rem;
 }
