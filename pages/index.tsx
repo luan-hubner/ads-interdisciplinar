@@ -4,6 +4,8 @@ import styles from '../styles/Home.module.css'
 
 import Header from '../components/Header'
 import Project from '../components/Project'
+import Post from '../components/Post'
+import Footer from '../components/Footer'
 
 //&rarr;
 //<Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
@@ -41,6 +43,8 @@ export default function Home() {
               </button>
             </div>
           </div>
+
+          <img src="/assets/images/arrow-down.png" alt="Scroll Down" />
         </section>
 
         <section className={styles.information}>
@@ -208,6 +212,53 @@ export default function Home() {
             </button>
           </div>
         </section>
+
+        <section className={styles.blog}>
+          <div className={styles.container}>
+            <div className={styles.section__header}>
+              <div className={styles.indicator}>
+                <h5>/blog</h5>
+                <h1>NOSSAS POSTAGENS</h1>
+              </div>
+
+              <div className={styles.info}>
+                <p>
+                  Usamos esse espaço para postar algumas das atividades que
+                  realizamos durante o curso, notícias e eventos que acontecem
+                  no nosso Centro Universitário, venha conhecer um pouco mais de
+                  perto o nosso curso.
+                </p>
+              </div>
+            </div>
+
+            <div className={styles.posts}>
+              <Post
+                id={1}
+                title="Lorem Ipsum is not simply random text"
+                summary="The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested."
+                imageUrl="tech.png"
+              />
+              <Post
+                id={1}
+                title="Lorem Ipsum is not simply random text"
+                summary="The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested."
+                imageUrl="farm.png"
+              />
+              <Post
+                id={1}
+                title="Lorem Ipsum is not simply random text"
+                summary="The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested."
+                imageUrl="industry.png"
+              />
+            </div>
+
+            <button className={styles.default__button}>
+              <span>VER MAIS</span>
+            </button>
+          </div>
+        </section>
+
+        <Footer />
       </main>
     </div>
   )

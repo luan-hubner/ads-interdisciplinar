@@ -19,7 +19,7 @@
   text-transform: uppercase;
 
   animation: forwards;
-  visibility: hidden;
+  display: none;
 }
 
 .box h2 {
@@ -32,7 +32,7 @@
 
 .box .image {
   cursor: pointer;
-  visibility: hidden;
+  display: none;
 }
 
 .box:hover {
@@ -41,7 +41,7 @@
 }
 
 .box:hover h1 {
-  visibility: visible;
+  display: block;
 }
 
 .box:hover h2 {
@@ -49,5 +49,5 @@
 }
 
 .box:hover .image {
-  visibility: visible;
+  display: block;
 }

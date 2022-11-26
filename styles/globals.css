@@ -34,6 +34,7 @@ a {
   --background-default: #111111;
   --light-background-default: #151515;
   --background-hover-default: #202020;
+  --background-dark: #0b0b0b;
 }
 
 @media (prefers-color-scheme: dark) {

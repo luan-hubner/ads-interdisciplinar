@@ -49,6 +49,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 2.5rem;
+  position: relative;
 }
 
 .main .introduction .apresentation p {
@@ -87,6 +88,12 @@
 
 .main .introduction .apresentation button:hover span {
   color: var(--background-default);
+}
+
+.main .introduction img {
+  cursor: pointer;
+  position: absolute;
+  bottom: 4rem;
 }
 
 /* ------------------------------------------------------ */
@@ -326,4 +333,72 @@
   align-items: center;
   column-gap: 2.5rem;
   margin-bottom: 6rem;
+}
+
+/* ------------------------------------------------------ */
+
+.main .blog {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 0;
+}
+
+.main .blog .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  column-gap: 5rem;
+}
+
+.main .blog .container .section__header {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr;
+  margin-bottom: 6rem;
+}
+
+.main .blog .container .section__header .indicator h5 {
+  font-family: IBM_MONO_REGULAR;
+  font-size: 1.5rem;
+  color: var(--contrast-color);
+}
+
+.main .blog .container .section__header .indicator h1 {
+  font-family: IBM_SANS_BOLD;
+  font-size: 3rem;
+  color: var(--text-color);
+}
+
+.main .blog .container .section__header .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 1rem;
+}
+
+.main .blog .container .section__header .info p {
+  font-family: IBM_SANS_REGULAR;
+  font-size: 1rem;
+  color: var(--text-color);
+  text-align: start;
+  margin: 0;
+  padding-top: 40px;
+}
+
+.main .blog .container .section__header .info b {
+  font-family: IBM_SANS_BOLD;
+  font-size: 1rem;
+  color: var(--contrast-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.main .blog .container .posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2.5rem;
+  margin-bottom: 3rem;
 }
