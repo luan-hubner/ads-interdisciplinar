@@ -90,7 +90,7 @@
   color: var(--background-default);
 }
 
-.main .introduction img {
+.main .introduction .arrow__down {
   cursor: pointer;
   position: absolute;
   bottom: 4rem;
