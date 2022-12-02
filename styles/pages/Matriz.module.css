@@ -26,6 +26,7 @@
   justify-content: center;
   color: var(--text-color);
   margin-bottom: 4rem;
+  cursor: pointer;
 }
 
 .main .container h1 img {

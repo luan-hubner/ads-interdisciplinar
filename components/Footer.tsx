@@ -9,18 +9,18 @@ export default function Footer() {
         <div className={styles.links}>
           <div className={styles.list}>
             <Link to="introduction" smooth={true} duration={600}>
-              <a href="javascript:void(0);">Informações</a>
+              <a href="#">Informações</a>
             </Link>
             <Link to="projects" smooth={true} duration={600}>
-              <a href="javascript:void(0);">Projetos</a>
+              <a href="#">Projetos</a>
             </Link>
             <Link to="blog" smooth={true} duration={600}>
-              <a href="javascript:void(0);">Blog</a>
+              <a href="#">Blog</a>
             </Link>
             <a href="#">Contato</a>
           </div>
           <div className={styles.list}>
-            <a href="https://www.instagram.com/adsunifasipe/" target="_blank">
+            <a href="https://www.instagram.com/adsunifasipe/" target="_blank" rel="noreferrer">
               Instagram
             </a>
             <a href="">Facebook</a>
@@ -31,7 +31,7 @@ export default function Footer() {
         <div className={styles.additional}>
           <img src="/assets/images/fasipe.png" alt="Fasipe Logo" />
 
-          <span>
+          <span onClick={() => window.open('https://github.com/luan-hubner/ads-interdisciplinar')}>
             código fonte <img src="/assets/images/mini-github.png" alt="GitHub Logo" />
           </span>
         </div>

@@ -1,4 +1,5 @@
 import Modal from 'react-modal'
+import styles from '../styles/components/ModalTopic.module.css'
 
 const customStyles = {
   content: {
@@ -11,34 +12,36 @@ const customStyles = {
     borderRadius: '1px',
     backgroundColor: 'var(--light-background-default)',
     borderColor: 'var(--contrast-color)',
-    maxWidth: 500,
+    maxWidth: 600,
   },
   overlay: {
     background: 'rgba(0, 0, 0, 0.7)',
   },
 }
 
+interface ModalData {
+  title: string
+  content: string
+}
+
 interface ModalProps {
   isOpen: boolean
   handleOpen: () => void
+  data: ModalData
 }
 
-export default function ModalTopic({ isOpen, handleOpen }: ModalProps) {
+export default function ModalTopic({ isOpen, handleOpen, data }: ModalProps) {
   return (
     <Modal isOpen={isOpen} onRequestClose={handleOpen} style={customStyles} contentLabel="Example Modal">
-      <div className="header">
-        <h1>WEB DEVELOPMENT</h1>
+      <div className={styles.header}>
+        <h1>{data.title}</h1>
 
-        <h1 onClick={() => handleOpen()}>&#10006;</h1>
+        <h1 className={styles.close} onClick={() => handleOpen()}>
+          &#10006;
+        </h1>
       </div>
 
-      <p>
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections
-        1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original
-        form, accompanied by English versions from the 1914 translation by H. Rackham.
-      </p>
-
-      <button></button>
+      <p className={styles.p}>{data.content}.</p>
     </Modal>
   )
 }

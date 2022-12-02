@@ -10,16 +10,69 @@ import Footer from '../components/Footer'
 
 import { Link } from 'react-scroll'
 import ModalTopic from '../components/ModalTopic'
+import Image from 'next/image'
 
 //&rarr;
 //<Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
 
+interface ModalData {
+  title: string
+  content: string
+}
+
 export default function Home() {
   const [modalTopicIsOpen, setModalTopicIsOpen] = useState(false)
+  const [modalContent, setModalContent] = useState({
+    title: '',
+    content: '',
+  })
 
-  function handleModalTopicOpen() {
+  // let modalData: ModalData =
+
+  function handleModalTopicOpen(props?: ModalData) {
+    if (props) {
+      setModalContent(props)
+    }
     setModalTopicIsOpen((prev) => !prev)
   }
+
+  const studyTopics = [
+    {
+      title: 'WEB DEVELOPMENT',
+      content:
+        'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.',
+    },
+    {
+      title: 'ALGORITHMS',
+      content:
+        'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.',
+    },
+    {
+      title: 'PROGRAMMING LOGIC',
+      content:
+        'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.',
+    },
+    {
+      title: 'COMPUTER ARCHITECTURE',
+      content:
+        'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.',
+    },
+    {
+      title: 'DATA STRUCTURE',
+      content:
+        'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.',
+    },
+    {
+      title: 'NETWORKS',
+      content:
+        'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.',
+    },
+    {
+      title: 'GRAPHIC COMPUTING',
+      content:
+        'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.',
+    },
+  ]
 
   return (
     <div>
@@ -29,7 +82,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <ModalTopic handleOpen={handleModalTopicOpen} isOpen={modalTopicIsOpen} />
+      <ModalTopic handleOpen={handleModalTopicOpen} isOpen={modalTopicIsOpen} data={modalContent} />
 
       <main className={styles.main}>
         <Header />
@@ -40,7 +93,6 @@ export default function Home() {
 
             <div className={styles.apresentation}>
               <p>
-                {' '}
                 Preparando você para o mercado de trabalho com uma metodologia focada em{' '}
                 <span className={styles.bold__text}>hands-on</span> e com muito{' '}
                 <span className={styles.bold__text}>networking</span>.
@@ -60,7 +112,7 @@ export default function Home() {
             offset={50}
             duration={500}
           >
-            <img src="/assets/images/arrow-down.png" alt="Scroll Down" />
+            <Image src="/assets/images/arrow-down.png" alt="Scroll Down" width={90} height={50} />
           </Link>
         </section>
 
@@ -147,27 +199,11 @@ export default function Home() {
             </div>
 
             <div className={styles.course__content}>
-              <div className={styles.topic} onClick={() => handleModalTopicOpen()}>
-                <h2>WEB DEVELOPMENT</h2>
-              </div>
-              <div className={styles.topic}>
-                <h2>ALGORITHMS</h2>
-              </div>
-              <div className={styles.topic}>
-                <h2>PROGRAMMING LOGIC</h2>
-              </div>
-              <div className={styles.topic}>
-                <h2>COMPUTER ARCHITECTURE</h2>
-              </div>
-              <div className={styles.topic}>
-                <h2>WEB DEVELOPMENT</h2>
-              </div>
-              <div className={styles.topic}>
-                <h2>ALGORITHMS</h2>
-              </div>
-              <div className={styles.topic}>
-                <h2>PROGRAMMING LOGIC</h2>
-              </div>
+              {studyTopics.map((topic) => (
+                <div className={styles.topic} onClick={() => handleModalTopicOpen(topic)}>
+                  <h2>{topic.title}</h2>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -196,7 +232,7 @@ export default function Home() {
             </div>
 
             <button className={styles.default__button}>
-              <span>INSCREVA-SE</span>
+              <span>VER MAIS</span>
             </button>
           </div>
         </section>
